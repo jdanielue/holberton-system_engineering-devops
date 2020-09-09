@@ -1,2 +1,2 @@
 A#!/bin/bash
-ls -lv
+ls -lav
