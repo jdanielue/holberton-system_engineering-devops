@@ -3,5 +3,6 @@
 
 for element in $(ls)
 do
-    echo "$element"
+    NAME=${element#*-}
+    echo "$NAME"
 done
