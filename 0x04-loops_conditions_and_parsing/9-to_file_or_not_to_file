@@ -13,7 +13,7 @@ if test -e "$FILE"
     fi
     if test -f "$FILE"
     then
-        echo "is a regular file"
+        echo "holbertonschool is a regular file"
     fi
 else
     echo "holbertonschool file does not exist"
