@@ -2,7 +2,7 @@
 #  content of the current directory
 
 FILE=holbertonschool
-if test -f "$FILE";then
+if test -e "$FILE";then
     echo "holbertonschool file exists"
     if test -s "$FILE";then
         echo "holbertonschool file is not empty"
