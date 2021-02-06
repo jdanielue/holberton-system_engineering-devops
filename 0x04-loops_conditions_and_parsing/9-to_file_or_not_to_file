@@ -5,13 +5,13 @@ FILE=holbertonschool
 if test -e "$FILE";then
     echo "holbertonschool file exists"
     if test -s "$FILE";then
-        echo "holbertonschool file is not empty"
-    else
         echo "holbertonschool file is empty"
-    fi
-    if test -d "$FILE";then
     else
-        echo "holbertonschool is a regular file"
+        echo "holbertonschool file is not empty"
+    fi
+    if test -f "$FILE"
+    then
+        echo "holbertonschool file is not empty"
     fi
 else
     echo "holbertonschool file does not exist"
