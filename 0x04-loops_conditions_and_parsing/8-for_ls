@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #  content of the current directory
 
-for element in $(ls)
+for element in *
 do
     NAME=${element#*-}
     echo "$NAME"
