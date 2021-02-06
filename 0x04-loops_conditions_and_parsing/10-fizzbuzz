@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 #  content of the current directory
 
-for ((i = 0; i <= 100; i++));do
+for ((i = 1; i <= 100; i++));do
     if [ 0 -eq $(( i % 3 )) ] && [ 0 -eq $(( i % 5 )) ]
     then
         echo "FizzBuzz"
     elif [ 0 = $(( i%5 )) ]
     then
         echo "Buzz"
-    elif [ i = $(( i%3 )) ]
+    elif [ 0 = $(( i%3 )) ]
     then
         echo "Fizz"
     else
