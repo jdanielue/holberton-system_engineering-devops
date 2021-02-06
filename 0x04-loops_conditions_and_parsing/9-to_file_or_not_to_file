@@ -7,9 +7,9 @@ if test -e "$FILE"
     echo "holbertonschool file exists"
     if test -s "$FILE"
     then
-        echo "holbertonschool file is empty"
-    else
         echo "holbertonschool file is not empty"
+    else
+        echo "holbertonschool file is empty"
     fi
     if test -f "$FILE"
     then
