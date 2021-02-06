@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#  content of the current directory
+
+for element in $(ls)
+do
+    echo "$element"
+done
