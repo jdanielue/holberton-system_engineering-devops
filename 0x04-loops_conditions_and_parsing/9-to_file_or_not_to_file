@@ -10,6 +10,7 @@ if test -e "$FILE";then
         echo "holbertonschool file is empty"
     fi
     if test -d "$FILE";then
+    else
         echo "holbertonschool is a regular file"
     fi
 else
