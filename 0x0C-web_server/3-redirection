@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# Script that install nginx
+
+if ! [ -x "$(command -v nginx)" ]; then
+    apt update -y;
+    apt install nginx -y;
+fi
+
+service nginx start;
+echo "Holberton School" > /var/www/html/index.nginx-debian.html;
+nginx -s reload;
+
+#redirect
+sed -i "/listen 80 default_server;/a \\\trewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4$request_uri? permanent;" /etc/nginx/sites-enabled/default;
+nginx -s reload;
