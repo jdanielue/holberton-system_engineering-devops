@@ -2,8 +2,8 @@
 # Script that install nginx
 
 if ! [ -x "$(command -v nginx)" ]; then
-    apt update -y;
-    apt install nginx -y;
+    sudo apt update -y;
+    sudo apt install nginx -y;
 fi
 
 service nginx start;
