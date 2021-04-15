@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# find out what’s keeping your Ubuntu container
+# find out what’s keeping your Ubuntu containe
 sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
 sudo service nginx restart
 sudo rm /usr/sbin/nginx
