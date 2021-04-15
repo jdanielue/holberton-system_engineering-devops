@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # find out what’s keeping your Ubuntu container
-sed -i 's/listen 8080/listen 80/g' /etc/nginx/sites-enabled/default;
+sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
 sudo service nginx restart
