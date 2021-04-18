@@ -4,10 +4,9 @@
 # The subdomain [SUB_DOMAIN] is a [RECORD_TYPE] record and points to [DESTINATION]
 
 if [[ $# -eq 1 ]]
-then 
+then
     for i in www lb-01 web-01 web-02
     do
-        
         echo -n "The subdomain $i"
         dig $i"."$1 | grep -A1 'ANSWER SECTION:' | awk '{ print " is a " $4 " record and points to " $5 }' | sed -n 2p
     done
