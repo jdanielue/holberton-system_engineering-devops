@@ -2,7 +2,7 @@
 # Bash script that accepts one argument
 
 service nginx stop
-
+chmod 777 /etc/nginx/nginx.conf
 filea="/etc/nginx/sites-available/default"
 
 sed -i 's/listen 80 default_server;/listen 8080 default_server;/g' $filea;
