@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
 # Bash script that accepts one argument
-sudo -u "$1"
+if [ $# -eq 2 ]
+then
+    sudo -u "$1"
+fi
 whoami
