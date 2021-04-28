@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Bash script that accepts one argument
+# Bash script that accepts one argument1
 if [ "$#" -eq 1 ]
 then
     if id "$1" &>/dev/null; then
@@ -11,5 +11,5 @@ then
 fi
 if [ "$#" -eq 0 ]
 then
-whoami
+    whoami
 fi
