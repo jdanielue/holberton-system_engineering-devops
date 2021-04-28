@@ -1,10 +1,8 @@
 #!/usr/bin/env bash
-# Bash script that accepts one argument
+# put nginx to listen in port 8080
 
+sed -i 's/80/8080/g' /etc/nginx/sites-enabled/default
 service nginx stop
-chmod 777 /etc/nginx/nginx.conf
-filea="/etc/nginx/sites-available/default"
+chmod a+rwx /etc/nginx/nginx.conf
 pkill -f apache2
-
-sed -i 's/listen 80 default_server;/listen 8080 default_server;/g' $filea;
 sudo -u nginx service nginx start
