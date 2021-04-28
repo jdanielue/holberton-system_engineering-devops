@@ -1,7 +1,15 @@
 #!/usr/bin/env bash
 # Bash script that accepts one argument
-if [ $# -eq 2 ]
+if [ "$#" -eq 1 ]
 then
-    sudo -u "$1"
+    if id "$1" &>/dev/null; then
+        sudo -u "$1" whoami
+    else
+        sudo useradd "$1"
+        sudo -u "$1" whoami
+    fi
 fi
+if [ "$#" -eq 0 ]
+then
 whoami
+fi
