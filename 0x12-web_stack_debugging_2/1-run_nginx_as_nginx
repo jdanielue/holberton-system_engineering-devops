@@ -4,6 +4,7 @@
 service nginx stop
 chmod 777 /etc/nginx/nginx.conf
 filea="/etc/nginx/sites-available/default"
+pkill apache2
 
 sed -i 's/listen 80 default_server;/listen 8080 default_server;/g' $filea;
 if id nginx &>/dev/null; then
@@ -12,3 +13,4 @@ if id nginx &>/dev/null; then
         sudo useradd nginx
         sudo -u nginx service nginx start
 fi
+
