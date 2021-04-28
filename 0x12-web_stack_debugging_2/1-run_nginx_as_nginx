@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# Bash script that accepts one argument
+
+sudo service nginx stop
+filea="/etc/nginx/sites-available/default"
+
+sed -i 's/listen 80 default_server;/listen 8080 default_server;/g' $filea;
+if id nginx &>/dev/null; then
+        sudo -u nginx service nginx start
+    else
+        sudo useradd nginx
+        sudo -u nginx service nginx start
+fi
