@@ -1,10 +1,12 @@
 #!/usr/bin/python3
+""" script to request data in using an API"""
 import requests
 from sys import argv
 import json
 
 
 def API_request(argv):
+    """ script to request data in using an API"""
     tod = "https://jsonplaceholder.typicode.com/todos/?userId=" + str(argv[1])
     users = "https://jsonplaceholder.typicode.com/users/" + str(argv[1])
 
@@ -15,7 +17,6 @@ def API_request(argv):
     user_name = json_u.get("name")
     var1 = 0
     var2 = 0
-    count = 0
     list1 = []
     for tasks in json_t:
         var1 += 1
