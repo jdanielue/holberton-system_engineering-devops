@@ -19,12 +19,12 @@ def API_request(argv):
     for tasks in json_t:
         var1 += 1
         if tasks['completed'] is True:
-            list1 += [tasks['title']]
             var2 += 1
     print("Employee {} is done with tasks({}/{}):".format(user_name, var2, var1))
 
-    for count in list1:
-        print('\t{}'.format(count))
+    for task in json_all:
+        if task['completed'] is True:
+            print('\t {}'.format(task.get('title')))
 
 if __name__ == "__main__":
     API_request(argv)
