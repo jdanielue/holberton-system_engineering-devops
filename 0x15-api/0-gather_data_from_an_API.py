@@ -3,6 +3,7 @@
 import requests
 from sys import argv
 
+
 def API_request(argv):
     """ script to request data in using an API"""
     tod = "https://jsonplaceholder.typicode.com/todos/?userId=" + str(argv[1])
@@ -21,10 +22,11 @@ def API_request(argv):
         if task.get('completed') is True:
             list1 += [task.get('title')]
             var2 += 1
-    print("Employee {} is done with tasks({}/{}):".format(user_name, var2, var1))
+    print("Employee {} is done with tasks({}/{}):"
+          .format(user_name, var2, var1))
 
     for count in list1:
-        print('\t{}'.format(count))
+        print('\t {}'.format(count))
 
 if __name__ == "__main__":
     API_request(argv)
