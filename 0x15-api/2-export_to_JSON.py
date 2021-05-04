@@ -2,8 +2,8 @@
 """ script to export data in the JSON format"""
 import csv
 import requests
-from sys import argv
 import json
+from sys import argv
 
 
 def API_request(argv):
