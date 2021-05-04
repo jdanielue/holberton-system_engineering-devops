@@ -20,7 +20,7 @@ def API_request(argv):
         writer = csv.writer(file)
         for count in json_t:
             writer.writerow([str(argv[1]), user_name,
-                             count['completed'], count['title']])
+                             count.get('completed'), count.get('title')])
 
 
 if __name__ == "__main__":
