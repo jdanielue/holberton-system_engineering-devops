@@ -19,7 +19,7 @@ def API_request(argv):
     for tasks in json_t:
         var1 += 1
         if tasks['completed'] is True:
-            list1 += [tasks['title']]
+            list1 += [task.get('title')]
             var2 += 1
     print("Employee {} is done with tasks({}/{}):".format(user_name, var2, var1))
 
