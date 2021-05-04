@@ -2,7 +2,6 @@
 """ script to export data in the CSV format"""
 import requests
 from sys import argv
-import json
 import csv
 
 
@@ -20,8 +19,8 @@ def API_request(argv):
     with open(str(argv[1])+"."+"csv", 'w', newline='') as file:
         writer = csv.writer(file)
         for count in json_t:
-            writer.writerow([str(argv[1]), str(user_name),
-                             str(count['completed']), str(count['title'])])
+            writer.writerow([str(argv[1]), user_name,
+                             count['completed'], count['title']])
 
 
 if __name__ == "__main__":
